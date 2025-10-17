@@ -52,10 +52,10 @@ function showMore(contentId) {
 
 
  // JavaScript slider
-const slides = document.querySelectorAll('.slideContent');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-const dots = document.querySelectorAll('.contentSlider-dot');
+const slides = (typeof document!=='undefined') ? document.querySelectorAll('.slideContent') : [];
+const prev = (typeof document!=='undefined') ? document.getElementById('prev') : null;
+const next = (typeof document!=='undefined') ? document.getElementById('next') : null;
+const dots = (typeof document!=='undefined') ? document.querySelectorAll('.contentSlider-dot') : [];
 
 let currentSlide = 0;
 
@@ -83,13 +83,15 @@ function goToNextSlide() {
   goToSlide(currentSlide + 1);
 }
 
-prev.addEventListener('click', goToPrevSlide);
-next.addEventListener('click', goToNextSlide);
+try{ if(prev) prev.addEventListener('click', goToPrevSlide); }catch(e){}
+try{ if(next) next.addEventListener('click', goToNextSlide); }catch(e){}
 
-for (let i = 0; i < dots.length; i++) {
-  dots[i].addEventListener('click', function() {
-    goToSlide(i);
-  });
-}
+try{
+  for (let i = 0; i < dots.length; i++) {
+    if(dots[i]){
+      dots[i].addEventListener('click', function() { goToSlide(i); });
+    }
+  }
+}catch(e){}
 
-setInterval(goToNextSlide,5000);
+try{ if(typeof window!=='undefined') setInterval(goToNextSlide,5000); }catch(e){}

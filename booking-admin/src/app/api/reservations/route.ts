@@ -1,12 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+const ALLOWED_ORIGINS = new Set([
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+]);
+
+function corsHeaders(req: NextRequest) {
+  const origin = req.headers.get("origin") || "*";
+  const allowOrigin = ALLOWED_ORIGINS.has(origin) ? origin : "*";
+  return {
+    "Access-Control-Allow-Origin": allowOrigin,
+    "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+  } as Record<string, string>;
+}
+
+export async function OPTIONS(req: NextRequest) {
+  return new NextResponse(null, { headers: corsHeaders(req) });
+}
+
+export async function GET(req: NextRequest) {
   const reservations = await prisma.reservation.findMany({
     include: { passengers: true },
     orderBy: { createdAt: "desc" },
   });
-  return NextResponse.json({ ok: true, data: reservations });
+  return NextResponse.json({ ok: true, data: reservations }, { headers: corsHeaders(req) });
 }
 
 export async function POST(req: NextRequest) {
@@ -48,8 +67,8 @@ export async function POST(req: NextRequest) {
       include: { passengers: true },
     });
 
-    return NextResponse.json({ ok: true, data: created }, { status: 201 });
+    return NextResponse.json({ ok: true, data: created }, { status: 201, headers: corsHeaders(req) });
   } catch (err: any) {
-    return NextResponse.json({ ok: false, error: err?.message || "Server error" }, { status: 500 });
+    return NextResponse.json({ ok: false, error: err?.message || "Server error" }, { status: 500, headers: corsHeaders(req) });
   }
 }

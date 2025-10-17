@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+model Reservation {
+  id            Int       @id @default(autoincrement())
+  from          String
+  to            String
+  date          String    // YYYY-MM-DD
+  time          String    // HH:mm
+  phone         String
+  flightCode    String?   // optional
+  passengerCount Int      @default(1)
+  passengers    Passenger[]
+  luggageCount  Int       @default(0)
+  status        ReservationStatus @default(PENDING)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Passenger {
+  id             Int          @id @default(autoincrement())
+  name           String
+  reservationId  Int
+  reservation    Reservation  @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  role         UserRole @default(ADMIN)
+  createdAt    DateTime @default(now())
+}
+
+enum UserRole {
+  ADMIN
+}

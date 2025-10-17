@@ -1,3 +1,21 @@
+// Reservation panel global guards
+;(function(){
+  try{
+    // jQuery/meanmenu stub if plugin missing
+    if (window.jQuery) {
+      if (!window.$) window.$ = window.jQuery;
+      var $ = window.jQuery; $.fn = $.fn || {};
+      if (typeof $.fn.meanmenu !== 'function') { $.fn.meanmenu = function(){ return this; } }
+      if (typeof $.fn.owlCarousel !== 'function') { $.fn.owlCarousel = function(){ return this; } }
+    }
+  }catch(e){}
+  function swallow(ev){ if(!window.__RES_PANEL_OPEN__) return; try{ if(ev.key==='Escape'){ ev.preventDefault(); } if(ev.stopImmediatePropagation) ev.stopImmediatePropagation(); ev.stopPropagation(); ev.cancelBubble = true; }catch(e){} return false; }
+  ;['click','touchstart','mousedown','mouseup','keyup','keydown'].forEach(function(evt){
+    try{ window.addEventListener(evt, swallow, true); document.addEventListener(evt, swallow, true); document.body && document.body.addEventListener(evt, swallow, true);}catch(e){}
+    try{ window.addEventListener(evt, swallow, false); document.addEventListener(evt, swallow, false); document.body && document.body.addEventListener(evt, swallow, false);}catch(e){}
+  });
+})();
+
 (function ($) {
     "use strict";
 

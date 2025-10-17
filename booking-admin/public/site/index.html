@@ -93,7 +93,7 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
 <!-- removed old 3001 iframe widget -->
 
 <!-- Inline Reservation Button + Form (no iframe) -->
-<a id="inl-reserve-open" href="#" onclick="(function(){try{if(window.__RES_OPEN){window.__RES_OPEN();}else{var p=document.getElementById('inl-reserve-panel');var b=document.getElementById('inl-reserve-backdrop');if(p&&b){p.classList.add('open');b.classList.add('open');document.body.classList.add('no-scroll');document.body.classList.add('no-pe');window.__RES_PANEL_OPEN__=true;}}}catch(e){}})();return false;" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:inline-flex;align-items:center;gap:8px;padding:.7rem 1rem;border:0;border-radius:9999px;background:linear-gradient(135deg,#25D366,#1ebe57);color:#fff;font-weight:600;box-shadow:0 10px 24px rgba(37,211,102,.35);text-decoration:none"><span class="dot" style="width:8px;height:8px;background:#fff;border-radius:50%;opacity:.9"></span> Rezervasyon Talebi</a>
+<a id="inl-reserve-open" href="#" onclick="(function(){try{if(window.__RES_OPEN){window.__RES_OPEN();}else{var p=document.getElementById('inl-reserve-panel');var b=document.getElementById('inl-reserve-backdrop');if(p&&b){p.classList.add('open');b.classList.add('open');document.body.classList.add('no-scroll');document.body.classList.add('no-pe');window.__RES_PANEL_OPEN__=true;try{var d=document.getElementById('date');var t=document.getElementById('time');var now=new Date();if(d&&!d.value){d.value=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);}if(t&&!t.value){var hh=('0'+now.getHours()).slice(-2);var mm=('0'+now.getMinutes()).slice(-2);t.value=hh+':'+mm;}}catch(_){} }}}catch(e){}})();return false;" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:inline-flex;align-items:center;gap:8px;padding:.7rem 1rem;border:0;border-radius:9999px;background:linear-gradient(135deg,#25D366,#1ebe57);color:#fff;font-weight:600;box-shadow:0 10px 24px rgba(37,211,102,.35);text-decoration:none"><span class="dot" style="width:8px;height:8px;background:#fff;border-radius:50%;opacity:.9"></span> Rezervasyon Talebi</a>
 <style>
   /* floating trigger button */
   #inl-reserve-open{position:fixed;right:16px;bottom:16px;z-index:9999;display:inline-flex;align-items:center;gap:8px;padding:.7rem 1rem;border:0;border-radius:9999px;background:linear-gradient(135deg,#25D366,#1ebe57);color:#fff;font-weight:600;box-shadow:0 10px 24px rgba(37,211,102,.35);text-decoration:none}
@@ -260,7 +260,7 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
         var json=await res.json().catch(function(){return {}});
         if(res.ok && json && json.ok){
           hide();
-          alert('Talebiniz alındı. Teşekkür ederiz.');
+          alert('Rezervasyon talebiniz alınmıştır. En kısa sürede WhatsApp üzerinden sizinle iletişime geçilecektir.');
           form.reset();
           renderPax();
         }else{

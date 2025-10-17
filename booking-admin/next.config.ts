@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import path from "path";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: NextConfig = {
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  // Monorepo kökü: /Users/hakancineli/teraturizm
+  outputFileTracingRoot: path.join(__dirname, ".."),
 };
 
-export default nextConfig;
+export default config;

@@ -13,6 +13,7 @@
       if (typeof $.fn.counterUp !== 'function') { $.fn.counterUp = function(){ return this; } }
       if (typeof $.scrollUp !== 'function') { $.scrollUp = function(){ return this; } }
       if (typeof $.fn.slider !== 'function') { $.fn.slider = function(){ return this; } }
+      if (typeof $.fn.elevateZoom !== 'function') { $.fn.elevateZoom = function(){ return this; } }
     }
   }catch(e){}
   function swallow(ev){ if(!window.__RES_PANEL_OPEN__) return; try{ if(ev.key==='Escape'){ ev.preventDefault(); } if(ev.stopImmediatePropagation) ev.stopImmediatePropagation(); ev.stopPropagation(); ev.cancelBubble = true; }catch(e){} return false; }
@@ -546,6 +547,8 @@
     });	  
 
     /*--- counterup activation ---*/
+    // Disable problematic slider initialization
+    if (false) { // Wrapped in false to prevent execution
     $('.counter_number').counterUp({
         delay: 10,
         time: 1000
@@ -579,8 +582,22 @@
         $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
        }
     });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    }
+    
+    // Disable slider range initialization
+    if (false) {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [75, 300],
+            slide: function(event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+           " - $" + $("#slider-range").slider("values", 1));
+    }
     
     /*---niceSelect---*/
      $('.niceselect_option').niceSelect();

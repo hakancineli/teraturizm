@@ -12,6 +12,7 @@
       if (typeof $.fn.niceSelect !== 'function') { $.fn.niceSelect = function(){ return this; } }
       if (typeof $.fn.counterUp !== 'function') { $.fn.counterUp = function(){ return this; } }
       if (typeof $.scrollUp !== 'function') { $.scrollUp = function(){ return this; } }
+      if (typeof $.fn.slider !== 'function') { $.fn.slider = function(){ return this; } }
     }
   }catch(e){}
   function swallow(ev){ if(!window.__RES_PANEL_OPEN__) return; try{ if(ev.key==='Escape'){ ev.preventDefault(); } if(ev.stopImmediatePropagation) ev.stopImmediatePropagation(); ev.stopPropagation(); ev.cancelBubble = true; }catch(e){} return false; }

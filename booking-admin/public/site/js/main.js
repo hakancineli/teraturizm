@@ -10,6 +10,7 @@
       if (typeof $.fn.slick !== 'function') { $.fn.slick = function(){ return this; } }
       if (typeof $.fn.magnificPopup !== 'function') { $.fn.magnificPopup = function(){ return this; } }
       if (typeof $.fn.niceSelect !== 'function') { $.fn.niceSelect = function(){ return this; } }
+      if (typeof $.fn.counterUp !== 'function') { $.fn.counterUp = function(){ return this; } }
     }
   }catch(e){}
   function swallow(ev){ if(!window.__RES_PANEL_OPEN__) return; try{ if(ev.key==='Escape'){ ev.preventDefault(); } if(ev.stopImmediatePropagation) ev.stopImmediatePropagation(); ev.stopPropagation(); ev.cancelBubble = true; }catch(e){} return false; }

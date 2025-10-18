@@ -1,16 +1,32 @@
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export default async function AdminPage() {
-  const reservations = await prisma.reservation.findMany({
-    include: { passengers: true },
-    orderBy: { createdAt: "desc" },
-  });
+  let reservations: Awaited<ReturnType<typeof prisma.reservation.findMany>> = [];
+  let error: string | null = null;
+  try {
+    reservations = await prisma.reservation.findMany({
+      include: { passengers: true },
+      orderBy: { createdAt: "desc" },
+    });
+  } catch (e: any) {
+    error = e?.message || "Database error";
+  }
 
   return (
     <main style={{ padding: 24 }}>
       <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Rezervasyonlar</h1>
+      {error && (
+        <div style={{ padding: 12, marginBottom: 16, background: "#fff7ed", border: "1px solid #fdba74", color: "#9a3412", borderRadius: 6 }}>
+          <div style={{ fontWeight: 700, marginBottom: 6 }}>Hata</div>
+          <div>{error}</div>
+          <div style={{ marginTop: 8, fontSize: 12, color: "#a16207" }}>
+            Lütfen Vercel'de <code>DATABASE_URL</code> değerinin doğru olduğundan ve build sırasında <code>prisma db push</code>'ın çalıştığından emin olun.
+          </div>
+        </div>
+      )}
       <div style={{ overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>

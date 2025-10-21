@@ -417,7 +417,7 @@ color: #fff;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://proje.zeplingo.com/uploads/slider/slider-18pAjl4y-1.png);
+    background-image: url(/site/uploads/slider/slider-18pAjl4y-1.png);
     top: 0px;
     left: 0px;
     width: 100%;
@@ -1149,3 +1149,213 @@ display: inline-block;
  * New Slider
  * New Slider
  */
+
+/* Rezervasyon Formu Responsive Düzeltmeleri */
+@media (max-width: 768px) {
+  .reservation-form {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .reservation-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .reservation-form .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Mobil cihazlarda form alanlarının genişliği */
+  .form-control {
+    width: 100% !important;
+  }
+  
+  /* Tarih alanlarının responsive düzeni */
+  .date-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .date-fields .form-group {
+    flex: 1 1 100%;
+  }
+  
+  /* Adres otomatik tamamlama alanı */
+  .pac-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Tablet cihazlar için responsive düzen */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .reservation-form {
+    padding: 20px;
+  }
+  
+  .date-fields .form-group {
+    flex: 1;
+  }
+}
+
+/* Form alanları için genel responsive düzen */
+.reservation-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Google Maps otomatik tamamlama için responsive düzen */
+.pac-item {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.pac-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* Rezervasyon paneli için mobil düzenlemeler */
+#inl-reserve-panel {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media (max-width: 520px) {
+  #inl-reserve-panel {
+    max-width: 100% !important;
+    width: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/* Mobil cihazlarda form alanları için optimizasyonlar */
+@media (max-width: 768px) {
+  /* Rezervasyon formu mobil optimizasyonları */
+  #inl-reserve-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  #inl-reserve-form input[type="text"],
+  #inl-reserve-form input[type="tel"],
+  #inl-reserve-form input[type="date"],
+  #inl-reserve-form select {
+    height: 45px !important;
+    font-size: 16px !important; /* iOS'ta zoom olmasını engeller */
+    padding: 10px 15px !important;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+  
+  /* Tarih alanları için özel stil */
+  #inl-reserve-form input[type="date"] {
+    position: relative;
+  }
+  
+  /* iOS'ta tarih alanlarının okunu gizle */
+  #inl-reserve-form input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+  
+  /* Form alanlarına dokunulduğunda gösterilecek vurgu */
+  #inl-reserve-form input:focus,
+  #inl-reserve-form select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Form butonları için optimizasyon */
+  #inl-reserve-form .btn {
+    height: 45px;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  /* Mobil cihazlarda form konteyneri */
+  .inl-reserve-container {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form başlıkları için optimizasyon */
+  .inl-reserve-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form alan etiketleri için optimizasyon */
+  .inl-reserve-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+  }
+}
+
+/* Mobil cihazlarda klavye açıldığında formun kaymasını engelle */
+@media (max-width: 768px) {
+  .inl-reserve-container {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* Klavye açıldığında formu yukarı taşı */
+  .inl-reserve-container.keyboard-open {
+    transform: translateY(-50px);
+    transition: all 0.3s ease;
+  }
+}
+
+/* iOS Safari için özel düzeltmeler */
+@supports (-webkit-touch-callout: none) {
+  /* iOS'te form alanlarının stilini düzelt */
+  #inl-reserve-form input,
+  #inl-reserve-form select {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  
+  /* iOS'te tarih alanlarını düzelt */
+  #inl-reserve-form input[type="date"] {
+    -webkit-appearance: none;
+  }
+}
+
+/* Mobil tarayıcılarda dokunma alanını artır */
+#inl-reserve-form input[type="date"],
+#inl-reserve-form select {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobil cihazlarda form alanlarını daha büyük hale getir */
+@media (max-width: 480px) {
+  #inl-reserve-form input[type="text"],
+  #inl-reserve-form input[type="tel"],
+  #inl-reserve-form input[type="date"],
+  #inl-reserve-form select {
+    height: 50px !important;
+    font-size: 18px !important;
+    padding: 12px 15px !important;
+  }
+}

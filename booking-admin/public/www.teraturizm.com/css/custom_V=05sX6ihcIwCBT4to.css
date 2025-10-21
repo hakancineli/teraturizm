@@ -1,0 +1,1151 @@
+/*!
+ * ZeplinGo
+ * Custom css
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) ZeplinGo
+ */
+
+#accordionExample .container{
+    background-color: #fff!important;
+}
+
+#accordionExample .card-header {
+    background-color: #000;
+}
+
+#accordionExample button p {
+	color :#ddae42;
+}
+
+#accordionExample .fa {
+  color:#ddae42;
+}
+
+.extra-content {
+            display: none;
+        }
+
+.ReadMore {
+      color: #e1af40;
+}
+
+.BlogMainDate {
+  display:none;
+}
+
+#mainpage-body a:hover {
+    color: #fabb03;
+}
+
+.navbar-dropdown {
+    background: linear-gradient(90deg, #000 0%, rgb(221 176 61) 51%, rgb(37 38 40) 100%);
+}
+
+.contentid44 {
+      padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+/*! header line */
+.cid-rxVuiMJXcQ .navbar {
+    border-left: solid 10px #e1af40;
+    margin: 0px;
+    padding: 17px;
+}
+.contentid72 {
+    padding-top: 140px;
+    border-left: solid 10px #e1af40;
+    box-shadow: 0px 20px 30px #000000ba;
+    z-index: 999 !important;
+    padding-bottom: 0px;
+}
+/*! header line */
+
+
+/*! Referanslar */
+
+.contentid78 {
+    background: #000000;
+}
+.contentid78 .banner-item {
+    box-shadow: 0px 0px 15px #ffffff52;
+}
+.contentid78 .mainPageBannerList img {
+    border-radius: 20px;
+    border: solid 5px #1c7b6f;
+}
+
+
+.RefBannerTitle {
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /*background-image: linear-gradient(45deg, #9f1a3e 10%, #fee55b 30%, #bb8831);*/
+	background-image: linear-gradient(45deg, #25D366 10%, #075E54 30%, #128C7E);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+      text-align: center;
+    margin-bottom: 30px;
+      width: 100%;
+  
+}
+
+.contentid78 p {
+color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+  
+}
+/*! Referanslar */
+
+/*! Google yorumlar */
+
+.contentid77 h2 {
+    color: #000 !important;
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #dfaf40 10%, #282828 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+/*! Google yorumlar */
+
+
+/*! iki görsel yan yana */
+
+.contentid23 p strong {
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #e1af40 10%, #282828 30%, #bb8831);
+    color: transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid23 img {
+    border-radius: 0px 30px 0px 30px;
+    border-top: solid 10px #e1af40;
+}
+
+/*! iki görsel yan yana */
+
+
+/*! ŞÖFÖRLÜ ARAÇ KİRALAMA */
+
+.contentid26 h1 {
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc107 10%, #ffffff 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid26 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #a47931;
+}
+
+
+.contentid26 p {
+
+    color: #fff!important;
+    font-size: 17px;
+}
+
+/*! ŞÖFÖRLÜ ARAÇ KİRALAMA */
+
+
+
+/*! ŞEHİRLER ARASI ŞOFÖRLÜ ARAÇ KİRALAMA */
+
+
+.contentid27 h1 {
+	color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #a37931 10%, #000000 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid27 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #a37931;
+}
+
+.contentid27 p {
+
+    font-size: 17px;
+}
+   
+
+/*! ŞEHİRLER ARASI ŞOFÖRLÜ ARAÇ KİRALAMA */
+
+
+
+/*! İstanbul Sabiha Gökçen Vip Transfer */
+
+.contentid58 h1 {
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc108 10%, #ffffff 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid58 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #d5b57f;
+}
+
+
+.contentid58 p {
+
+    color: #fff!important;
+    font-size: 17px;
+}
+
+
+/*! İstanbul Sabiha Gökçen Vip Transfer */
+
+
+
+/*! İSTANBUL HAVAALANI VİP TRANSFER HİZMETİ */
+
+.contentid59 h1 {
+	color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc108 10%, #000000 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid59 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #dfaf40;
+}
+
+.contentid59 p {
+
+    font-size: 17px;
+}
+   
+
+/*! İSTANBUL HAVAALANI VİP TRANSFER HİZMETİ */
+
+
+
+/*! Şehirler Arası Şoförlü Araç Kiralama */
+
+.contentid60 h1 {
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc108 10%, #ffffff 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid60 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #caa35f;
+}
+
+
+.contentid60 p {
+
+    color: #fff!important;
+    font-size: 17px;
+}
+
+/*! Şehirler Arası Şoförlü Araç Kiralama */
+
+
+
+/*! Vip Araç Kiralama İstanbul */
+
+.contentid61 h1 {
+	color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc108 10%, #000000 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid61 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #c9a25f;
+}
+
+.contentid61 p {
+
+    font-size: 17px;
+}
+
+/*! Vip Araç Kiralama İstanbul */
+
+
+
+/*! Şoförlü Araç Kiralama İstanbul */
+
+.contentid62 h1 {
+    color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #ffc108 10%, #ffffff 30%, #bb8831);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+}
+
+.contentid62 img {
+
+    border-radius: 0px 40px 0px 40px;
+    border: solid 4px #c9a25f;
+}
+
+
+.contentid62 p {
+
+    color: #fff!important;
+    font-size: 17px;
+}
+
+/*! Şoförlü Araç Kiralama İstanbul */
+
+
+
+
+
+/*!
+ * Ana sayfa öne çıkanlar
+ */
+
+.MainPageProdList .card-title {
+    padding-top: 1rem!important;
+    padding: 1rem;
+    position: absolute;
+    top: 20px;
+    background-color: #192026;
+    color: #d7b65d;
+    font-size: 1rem;
+}
+
+.list-car-spec {
+  font-size: 0.9rem;
+  color: #ae8e3a;
+}
+
+.catsection .card-wrapper {
+    border-top: solid 10px #d7b65d;
+    border-radius: 10px;
+}
+
+.catsection .container {
+     max-width: 1400px;
+}
+
+
+
+.MainPageProdList {
+      background-color: #ffffff;
+}
+.MainPageProdList .container {
+        max-width: 1600px;
+}
+
+.MainPageProdList .card-wrapper {
+    /*border: dashed 2px #d8d8d8; */
+	border-radius: 0px 30px 20px 30px;
+    padding: 0px 0px 10px 0px;
+    box-shadow: 0px 0px 20px #00000033;
+    border-top: solid 10px #192026;
+	border-left: solid 10px #192026;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://proje.zeplingo.com/uploads/slider/slider-18pAjl4y-1.png);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.current_price {
+    color: #d7b65d !important;
+    font-size: 1.4rem;
+}
+.cid-ry6ebB5y3k .mbr-text {
+        font-size: 1rem;
+    padding: 10px;
+}
+/*!
+ * Ana sayfa öne çıkanlar
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+/*! mainPageTwoSlider */
+.contentid76 {
+      background-color: #000000;
+}
+.contentid76 img {
+	  border-radius: 20px;
+      border: solid 5px #7f162f;
+      box-shadow: 0px 0px 34px #ffffff52;
+}
+.contentid76 .card-title {
+     display:none;
+}
+
+
+/*! mainPageTwoSlider */
+
+
+/*! Ana Sayfa sıralama */
+
+#mainpage-body {
+  display: flex;    
+  flex-direction: column;
+}
+.navTop3 {
+  order:1;
+}
+.slide {
+  order:2;
+}
+.contentid72 {
+  order:3;
+}
+.contentid73 {
+  order:2;
+}
+.contentid25 {
+  order:4;
+}
+.contentid44 {
+  order:5;
+}
+
+.contentid78 {
+  order:5;
+}
+
+ /*! Google yorum */
+.contentid77 {
+    order:6;
+}
+ /*! Google yorum */
+.contentid76 {
+    order:6;
+}
+.contentid22 {
+    order:6;
+}
+.contentid23 {
+    order:7;
+}
+.contentid26 {
+    order:8;
+}
+.contentid27 {
+    order:9;
+}
+.contentid43 {
+    order:10;
+}
+.MainPageProdList {
+    order:11;
+}
+.contentid58 {
+    order:12;
+}
+.contentid59 {
+    order:13;
+}
+.contentid60 {
+    order:14;
+}
+.contentid61 {
+    order:15;
+}
+.contentid62 {
+    order:16;
+}
+.mainbloglist {
+    order:17;
+}
+#footer2-5{
+    order:18;
+}
+.footer_ssl_card {
+    order:19;
+}
+
+
+ /*! Ana Sayfa sıralama */
+
+
+ /*! neden bizi tercih etmelisini */
+
+.contentid22 h2 {
+	color: !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* background-image: linear-gradient(45deg, #9f1a3e 10%, #282828 30%, #bb8831); */
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+    background-image: linear-gradient(45deg, #ffc107 10%, #ffc107 30%, #ffffff);
+}
+
+.contentid22 img {
+
+    border-radius: 30px;
+    border: solid 5px #ffc107; 
+}
+
+
+.contentid22 h3 {
+
+	color: #fff!important;
+    font-size: 1.2rem;
+  
+}
+
+
+
+
+ /*! neden bizi tercih etmelisini */
+
+
+/*! Google Yorumlar */
+.contentid77 .col-md-8 {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+/*! Google Yorumlar */
+
+
+
+
+/*!
+ * Slider
+ */
+
+.cid-ry6drk2Fr4 .carousel-caption {
+   top: 30%;
+}
+.cid-ry6drk2Fr4 .mbr-slider .carousel-control {
+    top: 40%;
+        width: 40px;
+}
+.cid-ry6drk2Fr4 .mbr-slider .carousel-control.carousel-control-next {
+    right: 0;
+    margin-right: 0rem;
+}
+.cid-ry6drk2Fr4 .mbr-slider .carousel-control.carousel-control-prev {
+    left: 0;
+    margin-left: 0rem;
+}
+.cid-ry6drk2Fr4 .mbr-slider .carousel-control .mbr-iconfont {
+    font-size: 1.2rem;
+}
+.carousel-control-next {
+      border-radius: 50px 10px 10px 50px!important;
+}
+.carousel-control-prev {
+      border-radius: 10px 50px 50px 10px!important;
+}
+
+.slide .mbr-overlay {
+    opacity: 9;
+    background: linear-gradient(0deg, rgb(0 0 0 / 87%) 29%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slide strong {
+	font-size: 1.4rem;
+    text-shadow: 5px 5px 20px #000;
+}
+@media screen and (min-width: 768px) { 
+  
+  .slide strong {
+    font-size: 4rem;
+ }
+  
+}
+
+.cid-ry6drk2Fr4 .mbr-slider .carousel-indicators {
+    margin-bottom: 20rem !important;
+}
+
+/*!
+ * Slider
+ */
+
+
+
+
+ /*! slider mobil */
+@media screen and (max-width: 768px) { 
+	
+  #slider-img-zep {
+        height: 500px !important;
+  }
+  .container-slide {
+          height: 500px !important;
+  }
+  .slider-fullscreen-image {
+            height: 500px !important;
+  }
+
+}
+
+ /*! slider mobil */
+
+
+
+
+
+/*!
+ * tek görsel sağda
+ */
+.contentid25 h1 {
+      font-size: 3rem;
+    font-weight: 500;
+}
+.contentid25 .container {
+      max-width: 1650px;
+}
+.contentid25 #jarallax-container-0 div{
+      background-size: contain!important;
+}
+
+
+@media screen and (min-width: 768px) { 
+  .contentid25 .container .media-content {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+ }
+}
+/*!
+ * tek görsel sağda
+ */
+
+
+
+
+
+/*!
+ * iconlu içerik
+ */
+
+.contentid73 .card-img {
+    overflow: inherit;
+}
+.contentid73 .card {
+  overflow: inherit;
+}
+
+
+ .contentid73 {
+	border-bottom: solid 15px #d7b65d;
+  }
+@media screen and (max-width: 991px) { 
+  .contentid73 {
+        background-color: #000!important;
+  }
+}
+
+.contentid73 .container {
+      max-width: 1500px;
+}
+@media (max-width: 1650px) {
+    .contentid73 .container {
+        max-width: 1240px;
+    }
+}
+@media (max-width: 1375px) {
+    .contentid73 .container {
+        max-width: 1040px;
+    }
+}
+@media (max-width: 1175px) {
+    .contentid73 .container {
+        max-width: 840px;
+    }
+}
+.contentid73 .container .media-container-row {
+      margin-top: -276px;
+}
+
+.contentid73 .container .media-container-row .card-box p {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.contentid73 h4 {
+    font-size: 1.4rem;
+}
+
+.contentid73 p {
+    font-size: 1rem;
+}
+
+
+.contentid73 .card-img img{
+     border-radius: 40px 40px 40px 40px;
+     border: solid 2px #d7b65d;
+     box-shadow: 0px 10px 20px #000;
+}
+
+@media screen and (min-width: 1176px) { 
+  
+    .contentid73 .card:nth-child(1),
+	.contentid73 .card:nth-child(2) {
+    border-right: dashed 1px #909090;
+	}
+  
+  .contentid73  .display-7 {
+    text-align: left !important;
+    margin-left: 20px;
+   }
+  
+  .contentid73 .p-3 {
+       padding: 0rem !important;
+        margin: 50px 50px 50px 0px !important;
+   }
+	
+  	.contentid73 .card {
+    display: flex;
+    flex-direction: row;
+	}
+  
+    .contentid73 .card a {
+    display: flex;
+    flex-direction: row;
+	}
+  
+   .contentid73 .card-img {
+    width: auto;
+	}
+  
+   .contentid73 .card-img img{
+    width: 100%!important;
+	}
+
+}
+
+/*!
+ * iconlu içerik
+ */
+
+
+ /*! Butonlar */
+
+.btn-info-outline, .btn-info-outline:active {
+    border-color: #e0af40;
+    color: #ffffff;
+    background: linear-gradient(90deg, #000 0%, #ffc107 100%);
+}
+
+
+.btn-info, .btn-info:active {
+    border-color: #ad1a46;
+    color: #ffffff;
+    background: linear-gradient(90deg, #000 0%, rgb(215 182 93) 100%);
+}
+
+ /*! Butonlar */
+
+
+ 
+
+
+ /*! karlisama alani */
+
+.contentid72 p {
+    font-size: 2rem !important;
+    border-bottom: solid 2px;
+}
+  .contentid72 {
+	    padding-top: 140px;
+    	box-shadow: 0px 20px 30px #000000ba;
+	    z-index: 999!important;
+        padding-bottom: 0px;
+  }
+
+    .contentid72 .display-2 {
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #dfae44 10%, #282828 30%, #bb8831);
+    color: transparent;
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-right: auto;
+    text-transform: uppercase;
+    }
+    .contentid72 .display-7 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    }
+
+    .contentid72 img {
+	border: solid 0px #e8e8e8!important;
+    border-bottom: solid 10px #dfae3f !important
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .contentid72 .display-2 {
+          font-size: 3rem;
+          line-height: 50px;
+      }
+    }
+
+
+    /*! karlisama alani */
+
+
+/*! Logo */
+
+.navbar-logo img {
+  
+    height: 5.6rem;
+    background: #fff;
+    padding: 0px;
+    border-radius: 10px;
+  
+}
+
+/*! Logo */
+
+/*! Slider */
+
+@media (max-width: 767px) {
+    .cid-ry6drk2Fr4 .mbr-slider .carousel-control {
+        display: none;
+    }
+}
+
+/*! Slider */
+
+.InformationRentalDetail {
+  background-color: #f44337;
+    color: #fff; 
+}
+.EndAddressDetail {
+  background-color: #f44337;
+    color: #fff; 
+}
+.StarAddressDetail {
+  background-color: #f44337;
+    color: #fff; 
+}
+
+.current_price {
+  display:none
+}
+.details-price {
+    display:none
+}
+
+.cid-rxVuiMJXcQ .navbar.navbar-short {
+    border-bottom: solid 4px #e91f62;
+}
+.blog-detail-page-text a {
+	    color: #149dcc;
+	text-decoration: underline;
+}
+
+/*! whatsapp button */
+    .socicon-whatsapp:before {
+        content: none;
+    }
+
+	.WhatsApp{
+        align-self: flex-end;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        
+    right: 20px!important;
+    left: auto;
+    width: 183px;
+	height: 60px;
+    background-image: url(https://www.3crental.com/uploads/whatsapp.png);
+    background-color: transparent;
+    }
+
+    .WhatsApp {
+        animation-name: WhatsApp;
+        animation-timing-function: ease;
+    }
+
+    @keyframes WhatsApp {
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-100px); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY(0); }
+    }
+
+/*! whatsapp button */
+
+/*! phone button */
+.PhoneCall {
+    bottom: 20px;
+}
+/*! phone button */
+
+
+
+#slider-img-zep {
+  -webkit-animation: kenburns-top 30s ease-out both;
+	        animation: kenburns-top 30s ease-out both;
+}
+
+#slider-text-zep {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s  both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s  both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+            transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+            transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+ 
+
+ /*!
+ * New Slider
+ * New Slider
+ * New Slider
+ */
+#contentSlider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+      box-shadow: 0px 0px 34px #ffffff52;
+    border-radius: 20px;
+}
+
+.slideContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.slideContent.active {
+  opacity: 1;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+      border-radius: 30px;
+      border: solid 5px #d7b65d;
+  
+}
+
+.contentSlider-content {
+
+}
+
+.contentSlider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.contentSlider-control#prev {
+  float: left;
+  margin-left: 10px;
+}
+
+.contentSlider-control#next {
+  float: right;
+  margin-right: 10px;
+}
+
+.contentSlider-control {
+display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255);
+    color: #7b4091;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    box-shadow: 0px 7px 11px #00000030;
+}
+
+.contentSlider-control:hover {
+  opacity: 1;
+}
+
+.contentSlider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.contentSlider-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(198 198 198);
+  margin: 0 6px;
+  transition: background-color 0.5s;
+}
+
+.contentSlider-dot.active {
+  background-color: #b01b46;
+}
+
+.slideContent {
+  position: absolute;
+}
+
+/*!
+ * New Slider
+ * New Slider
+ * New Slider
+ */

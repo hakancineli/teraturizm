@@ -2,9 +2,14 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
+<<<<<<< HEAD
   provider = "postgresql"
   url       = env("PRISMA_DATABASE_URL")
   directUrl = env("DATABASE_URL")
+=======
+  provider = "sqlite"
+  url      = env("PRISMA_DATABASE_URL")
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
 }
 
 generator client {
@@ -23,8 +28,23 @@ model Reservation {
   passengers    Passenger[]
   luggageCount  Int       @default(0)
   status        ReservationStatus @default(PENDING)
+<<<<<<< HEAD
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+=======
+  driverId      Int?      // Şoför ataması için
+  driver        Driver?   @relation(fields: [driverId], references: [id])
+  isExternal    Boolean   @default(false) // Dış şoför mü?
+  externalDriverName String? // Dış şoför adı
+  externalDriverPhone String? // Dış şoför telefon
+  price         Float?    // Fiyat bilgisi
+  paymentStatus PaymentStatus @default(UNPAID) // Ödeme durumu
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  // Muhasebe için
+  accountingRecords AccountingRecord[]
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
 }
 
 model Passenger {
@@ -34,10 +54,54 @@ model Passenger {
   reservation    Reservation  @relation(fields: [reservationId], references: [id], onDelete: Cascade)
 }
 
+<<<<<<< HEAD
+=======
+model Driver {
+  id          Int       @id @default(autoincrement())
+  name        String
+  phone       String
+  email       String?
+  licenseNo   String?
+  isExternal  Boolean   @default(false) // Dış şoför mü?
+  vehicleId   Int?      // Araç ataması (şirket şoförleri için)
+  vehicle     Vehicle?  @relation(fields: [vehicleId], references: [id])
+  reservations Reservation[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Vehicle {
+  id          Int       @id @default(autoincrement())
+  plate       String    @unique
+  brand       String
+  model       String
+  year        Int?
+  capacity    Int       @default(4)
+  type        VehicleType @default(STANDARD)
+  drivers     Driver[]  // Bir araca birden fazla şoför atanabilir
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model AccountingRecord {
+  id            Int         @id @default(autoincrement())
+  reservationId Int
+  reservation   Reservation @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  amount        Float
+  description   String?
+  type          AccountingType @default(INCOME) // GELİR veya GİDER
+  paymentMethod String?     // Ödeme yöntemi
+  paymentDate   DateTime    @default(now())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
 enum ReservationStatus {
   PENDING
   CONFIRMED
   CANCELLED
+<<<<<<< HEAD
 }
 
 model User {
@@ -46,8 +110,34 @@ model User {
   passwordHash String
   role         UserRole @default(ADMIN)
   createdAt    DateTime @default(now())
+=======
+  COMPLETED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  PARTIALLY_PAID
+  REFUNDED
+}
+
+enum VehicleType {
+  STANDARD
+  VIP
+  MINIBUS
+  VAN
+}
+
+enum AccountingType {
+  INCOME
+  EXPENSE
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
 }
 
 enum UserRole {
   ADMIN
+<<<<<<< HEAD
+=======
+  ACCOUNTANT
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
 }

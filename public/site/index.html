@@ -122,11 +122,27 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
     .inl-input {
       width: 100% !important;
       box-sizing: border-box !important;
+<<<<<<< HEAD
+=======
+      font-size: 16px !important; /* iOS'ta zoom'u engellemek için */
+      padding: 12px !important; /* Daha büyük dokunma alanı */
+    }
+    
+    /* Form başlıkları mobil cihazlarda daha belirgin */
+    .inl-field label {
+      font-size: 14px !important;
+      margin-bottom: 8px !important;
+      font-weight: 600 !important;
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
     }
     
     /* Tarih alanlarının mobil düzeni */
     .inl-row {
       grid-template-columns: 1fr !important;
+<<<<<<< HEAD
+=======
+      gap: 16px !important; /* Daha fazla boşluk */
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
     }
     
     /* Google Maps otomatik tamamlama için mobil düzen */
@@ -136,6 +152,46 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
       left: 0 !important;
       right: 0 !important;
     }
+<<<<<<< HEAD
+=======
+    
+    /* Form butonu mobil cihazlarda daha büyük */
+    #inl-reserve-submit {
+      padding: 16px !important;
+      font-size: 18px !important;
+      margin-top: 16px !important;
+    }
+    
+    /* Panel başlığı mobil cihazlarda daha büyük */
+    #inl-reserve-header {
+      padding: 18px !important;
+    }
+    
+    #inl-reserve-title {
+      font-size: 22px !important;
+    }
+    
+    /* Kapat butonu mobil cihazlarda daha büyük */
+    #inl-reserve-close {
+      font-size: 30px !important;
+      padding: 5px !important;
+    }
+    
+    /* Panel içeriği mobil cihazlarda daha fazla boşluk */
+    #inl-reserve-body {
+      padding: 24px !important;
+    }
+    
+    /* Input alanları arasındaki mesafe */
+    .inl-field {
+      margin-bottom: 16px !important;
+    }
+    
+    /* Yolcu adı alanları için özel stil */
+    #pax-names .inl-field {
+      margin-bottom: 16px !important;
+    }
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
   }
   
   /* Tablet cihazlar için responsive düzen */
@@ -381,6 +437,7 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
       return;
     }
     
+<<<<<<< HEAD
     const script = document.createElement('script');
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAKEs0WxS8bdhLCvj944rbM1B2jLQfTSoA&libraries=places&callback=setupPlaces';
     script.async = true;
@@ -389,6 +446,123 @@ Filomuzda yer alan VIP Mercedes Vito araçlarımız, lüks donanımları ve öze
       console.warn('Google Maps API yüklenirken hata oluştu');
     };
     document.head.appendChild(script);
+=======
+    // Define setupPlaces function before loading Google Maps API
+    window.setupPlaces = function() {
+      console.log('Google Places API loaded');
+      
+      // Initialize autocomplete for address fields
+      const fromInput = document.getElementById('from');
+      const toInput = document.getElementById('to');
+      
+      // Common autocomplete options
+      const autocompleteOptions = {
+        types: ['establishment', 'geocode'],
+        componentRestrictions: { country: ['tr'] },
+        fields: ['place_id', 'formatted_address', 'geometry', 'name']
+      };
+      
+      if (fromInput) {
+        const fromAutocomplete = new google.maps.places.Autocomplete(fromInput, autocompleteOptions);
+        
+        fromAutocomplete.addListener('place_changed', function() {
+          const place = fromAutocomplete.getPlace();
+          console.log('From place selected:', place);
+          
+          // Update input with formatted address if available
+          if (place.formatted_address) {
+            fromInput.value = place.formatted_address;
+          }
+        });
+      }
+      
+      if (toInput) {
+        const toAutocomplete = new google.maps.places.Autocomplete(toInput, autocompleteOptions);
+        
+        toAutocomplete.addListener('place_changed', function() {
+          const place = toAutocomplete.getPlace();
+          console.log('To place selected:', place);
+          
+          // Update input with formatted address if available
+          if (place.formatted_address) {
+            toInput.value = place.formatted_address;
+          }
+        });
+      }
+    };
+    
+    // Google Maps API script - completely disabled to avoid authorization errors
+    // Manual address input will be used instead
+    console.log('Google Maps API disabled - using manual address input');
+    
+    // Initialize form without Google Maps
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Initializing reservation form without Google Maps');
+      
+      // Add event listeners to the form
+      const reservationForm = document.getElementById('reservationForm');
+      if (reservationForm) {
+        reservationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          submitReservation();
+        });
+      }
+      
+      // Date picker initialization
+      const dateInput = document.getElementById('date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    });
+    
+    // Form submission function
+    function submitReservation() {
+      const form = document.getElementById('reservationForm');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Add passengers data
+      const passengers = [];
+      const passengerCount = parseInt(data.passengerCount);
+      for (let i = 1; i <= passengerCount; i++) {
+        const nameInput = document.getElementById(`passengerName${i}`);
+        if (nameInput && nameInput.value.trim()) {
+          passengers.push({ name: nameInput.value.trim() });
+        }
+      }
+      data.passengers = passengers;
+      
+      // Send to API
+      fetch('/api/reservations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(result => {
+        if (result.ok) {
+          alert('Rezervasyonunuz başarıyla alındı! En kısa sürede size dönüş yapacağız.');
+          form.reset();
+          // Reset date to today
+          const dateInput = document.getElementById('date');
+          if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.value = today;
+          }
+        } else {
+          alert('Rezervasyon yapılırken bir hata oluştu. Lütfen tekrar deneyin.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Rezervasyon yapılırken bir hata oluştu. Lütfen tekrar deneyin.');
+      });
+    }
+>>>>>>> c4ab0881ba48a6fae05f14bd3afcba6d8f9750eb
     
     // Google Maps Places API için mobil cihaz uyumlu stil ekle
     const style = document.createElement('style');
